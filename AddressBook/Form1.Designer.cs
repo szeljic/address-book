@@ -169,6 +169,7 @@
             this.listOfPersons.View = System.Windows.Forms.View.Details;
             this.listOfPersons.SelectedIndexChanged += new System.EventHandler(this.listOfPersons_SelectedIndexChanged);
             this.listOfPersons.Click += new System.EventHandler(this.listOfPersons_Click);
+            this.listOfPersons.DoubleClick += new System.EventHandler(this.listOfPersons_DoubleClick);
             // 
             // id
             // 
@@ -214,7 +215,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Address Book";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

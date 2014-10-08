@@ -120,5 +120,11 @@ namespace AddressBook
                 this.tbEmail.Text = "";
             }
         }
+
+        private void listOfPersons_DoubleClick(object sender, EventArgs e)
+        {
+            ListViewItem item = this.listOfPersons.SelectedItems[0];
+            new Form2(item.SubItems[1].Text, item.SubItems[2].Text, item.SubItems[3].Text, item.SubItems[4].Text).Show();
+        }
     }
 }
