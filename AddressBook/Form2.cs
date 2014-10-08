@@ -34,5 +34,10 @@ namespace AddressBook
             this.lblPhone.Text = this.phone;
             this.lblEmail.Text = this.email;
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

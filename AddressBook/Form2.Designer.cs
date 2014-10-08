@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.lblFullName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,12 +36,13 @@
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblFullName
             // 
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblFullName.Location = new System.Drawing.Point(40, 9);
             this.lblFullName.MinimumSize = new System.Drawing.Size(200, 0);
             this.lblFullName.Name = "lblFullName";
@@ -102,11 +104,22 @@
             this.lblEmail.Size = new System.Drawing.Size(0, 13);
             this.lblEmail.TabIndex = 6;
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(197, 157);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(284, 192);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblPhone);
@@ -114,6 +127,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblFullName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -131,5 +145,6 @@
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Button btnClose;
     }
 }

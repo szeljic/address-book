@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -162,6 +163,7 @@
             this.listOfPersons.FullRowSelect = true;
             this.listOfPersons.GridLines = true;
             this.listOfPersons.Location = new System.Drawing.Point(15, 139);
+            this.listOfPersons.MultiSelect = false;
             this.listOfPersons.Name = "listOfPersons";
             this.listOfPersons.Size = new System.Drawing.Size(357, 298);
             this.listOfPersons.TabIndex = 12;
@@ -200,6 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(384, 462);
             this.Controls.Add(this.listOfPersons);
             this.Controls.Add(this.btnRemove);
@@ -214,6 +217,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Address Book";
             this.Load += new System.EventHandler(this.Form1_Load);

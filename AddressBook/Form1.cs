@@ -42,6 +42,10 @@ namespace AddressBook
                 Person person = new Person(tbFullName.Text, tbAddress.Text, tbPhone.Text, tbEmail.Text);
                 personDAO.insertPerson(person);
                 this.loadListOfPerson();
+                this.tbFullName.Text = "";
+                this.tbAddress.Text = "";
+                this.tbPhone.Text = "";
+                this.tbEmail.Text = "";
             }
             else
             {
@@ -124,7 +128,7 @@ namespace AddressBook
         private void listOfPersons_DoubleClick(object sender, EventArgs e)
         {
             ListViewItem item = this.listOfPersons.SelectedItems[0];
-            new Form2(item.SubItems[1].Text, item.SubItems[2].Text, item.SubItems[3].Text, item.SubItems[4].Text).Show();
+            new Form2(item.SubItems[1].Text, item.SubItems[2].Text, item.SubItems[3].Text, item.SubItems[4].Text).ShowDialog(this);
         }
     }
 }
