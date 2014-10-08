@@ -72,9 +72,13 @@ namespace AddressBook
             if (this.listOfPersons.SelectedItems.Count > 0)
             {
                 string fullName = listOfPersons.SelectedItems[0].SubItems[1].Text;
-                lblInfo.Text = fullName;
                 personDAO.deletePerson(fullName);
                 this.loadListOfPerson();
+                this.lblInfo.Text = "Successfully removed.";
+                this.tbFullName.Text = "";
+                this.tbAddress.Text = "";
+                this.tbPhone.Text = "";
+                this.tbEmail.Text = "";
             } 
         }
 
@@ -86,6 +90,7 @@ namespace AddressBook
                 string oldPersonsFullName = lvi.SubItems[1].Text;
                 personDAO.updatePerson(oldPersonsFullName, new Person(tbFullName.Text, tbAddress.Text, tbPhone.Text, tbEmail.Text));
                 this.loadListOfPerson();
+                this.lblInfo.Text = "Successfully updated.";
             }
             else
             {
@@ -102,6 +107,17 @@ namespace AddressBook
                 this.tbAddress.Text = item.SubItems[2].Text;
                 this.tbPhone.Text = item.SubItems[3].Text;
                 this.tbEmail.Text = item.SubItems[4].Text;
+            }
+        }
+
+        private void listOfPersons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.listOfPersons.SelectedItems.Count < 1)
+            {
+                this.tbFullName.Text = "";
+                this.tbAddress.Text = "";
+                this.tbPhone.Text = "";
+                this.tbEmail.Text = "";
             }
         }
     }

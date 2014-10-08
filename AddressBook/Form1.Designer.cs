@@ -167,6 +167,7 @@
             this.listOfPersons.TabIndex = 12;
             this.listOfPersons.UseCompatibleStateImageBehavior = false;
             this.listOfPersons.View = System.Windows.Forms.View.Details;
+            this.listOfPersons.SelectedIndexChanged += new System.EventHandler(this.listOfPersons_SelectedIndexChanged);
             this.listOfPersons.Click += new System.EventHandler(this.listOfPersons_Click);
             // 
             // id
