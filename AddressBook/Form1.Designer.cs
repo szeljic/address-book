@@ -139,6 +139,7 @@
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnRemove
             // 
@@ -166,6 +167,7 @@
             this.listOfPersons.TabIndex = 12;
             this.listOfPersons.UseCompatibleStateImageBehavior = false;
             this.listOfPersons.View = System.Windows.Forms.View.Details;
+            this.listOfPersons.Click += new System.EventHandler(this.listOfPersons_Click);
             // 
             // id
             // 
