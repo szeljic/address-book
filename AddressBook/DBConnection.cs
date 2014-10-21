@@ -29,7 +29,7 @@ namespace AddressBook
             server = @"localhost";
             database = @"addressbook";
             uid = @"root";
-            password = @"stralezelja";
+            password = @"********";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
             connection = new MySqlConnection(connectionString);
